@@ -1,0 +1,211 @@
+@font-face {
+  font-family: GothamLight;
+  src: url(../fonts/Gotham-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: GothamBook;
+  src: url(../fonts/Gotham-Book.otf) format("opentype");
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	font-family: GothamBook;
+	color: #fff;
+	background: #294d09 url(../images/background.jpg) no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.background__portrait, .background__landscape {
+	display: none;
+}
+
+.text-block {
+	float: right;
+	width: 40%;
+	margin: 14% 11% 0;
+	line-height: 1.9em;
+}
+
+.description__header {
+	font-family: GothamLight;
+	font-size: 3.75em;
+	margin-bottom: 32px;
+}
+
+.about-me {
+	font-size: 1.6em;
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+
+.skills {
+	font-size: 1.25em;
+	opacity: 0.6;
+	margin-bottom: 40px;
+}
+
+.social-block {
+	margin-bottom: 10px;
+}
+
+.social-block__item {
+	float: left;
+	margin: 0 8% 0 -10px;
+}
+
+.social-block svg {
+	fill: #fff;
+	padding: 10px;
+}
+
+.social-block svg:hover {
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+
+.social-block svg#facebook {
+	width: 12px;
+	height: 22px;
+}
+
+.social-block svg#instagram {
+	width: 22px;
+	height: 21px;
+}
+
+.social-block svg#vkontakte {
+	width: 26px;
+	height: 19px;
+}
+
+/* IF THERE WILL BE
+
+.social-block svg#twitter {
+	width: 23px;
+	height: 19px;
+}
+
+.social-block svg#google {
+	width: 24px;
+	height: 24px;
+}
+
+.social-block svg#linkedin {
+	width: 22px;
+	height: 22px;
+}
+
+.social-block svg#pinterest {
+	width: 23px;
+	height: 31px;
+}
+*/
+
+.contacts__email {
+	margin-bottom: 15px;
+}
+
+.email__link {
+	color: #fff;
+	font-size: 1.25em;
+}
+
+.phone__link {
+	opacity: 0.6;
+	font-size: 1.25em;
+	color: #fff;
+}
+
+
+/*RESPONSIVE CSS*/
+
+@media screen and (orientation:portrait) {
+	.text-block {
+		float: left;
+		margin: 20% 5% 0;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.social-block__item:nth-child(4n+4) {
+		clear: left;
+	}
+
+	.social-block__item {
+		margin-top: 10%;
+	}
+
+	.skills {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+	.text-block {
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 736px) and (orientation:landscape) {
+	.background__portrait {
+		display: none;
+	}
+
+	.background__landscape {
+		display: block;
+	}
+
+	.background__landscape {
+		max-width: 100%;
+		height: auto;
+		z-index: -10;
+	}
+
+	.text-block {
+		margin: 14% 5% 0;
+	}
+}
+
+@media screen and (max-width: 736px) and (orientation:portrait) {
+	.background__landscape {
+		display: none;
+	}
+
+	.background__portrait {
+		display: block;
+	}
+
+	.background__portrait {
+		max-width: 100%;
+		height: auto;
+		z-index: -10;
+	}
+	.text-block {
+		margin: 20% 7% 0;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	body {
+		background: #294d09;
+	}
+
+	.wrapper {
+		z-index: 20;
+		background: linear-gradient(rgba(41, 77, 9, 0) 0px, rgba(41, 77, 9, 1) 200px);	
+		position: relative;
+		margin-top: -200px;
+	}
+
+	.text-block {
+		float: left;
+		line-height: 2.0em;
+		width: auto;
+		margin-bottom: 50px;
+	}
+}
