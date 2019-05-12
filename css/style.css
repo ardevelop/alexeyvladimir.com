@@ -11,13 +11,14 @@ html, body {
 	min-height: 100%;
 }
 
-body {
+.wrapper {
 	font-family: GothamBook;
 	color: #fff;
 	background: #294d09 url(../images/background.jpg) no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
+	height: 100vh;
 }
 
 .background__portrait, .background__landscape {
@@ -191,10 +192,6 @@ body {
 }
 
 @media screen and (max-width: 736px) {
-	body {
-		background: #294d09;
-	}
-
 	.wrapper {
 		z-index: 20;
 		background: linear-gradient(rgba(41, 77, 9, 0) 0px, rgba(41, 77, 9, 1) 200px);	
@@ -208,4 +205,10 @@ body {
 		width: auto;
 		margin-bottom: 50px;
 	}
+}
+
+.slick-slide img {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
 }
