@@ -8,7 +8,108 @@
 }
 
 html, body {
+	position: relative;
+	height: 100%;
 	min-height: 100%;
+	overflow: hidden;
+}
+
+.header {
+	position: absolute;
+	top: 45px;
+	right: 0;
+	left: 0;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	font-family: GothamBook;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+	.header {
+		justify-content: space-between;
+	}
+}
+
+.header .contacts {
+	margin-bottom: 0;
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.header .contacts {
+		display: block;
+	}
+}
+
+.header .contacts .email__link {
+	font-size: 14px;
+	text-decoration: none;
+	margin-right: 30px;
+}
+
+.header .contacts .email__link:hover {
+	opacity: 0.8;
+}
+
+.header .contacts .phone__link {
+	opacity: 1;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.header .contacts .phone__link:hover {
+	opacity: 0.8;
+}
+
+.nav {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.nav .social {
+	margin-bottom: 0;
+}
+
+.nav .social__item {
+	margin: 0 30px 0 0;
+}
+
+.nav__link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav__link:hover {
+	opacity: 0.8;
+}
+.logo {
+	text-align: center;
+}
+
+.logo p {
+	margin-bottom: 5px;
+	font-size: 22px;
+	color: #fff;
+}
+
+.logo span {
+	font-size: 14px;
+	opacity: 0.6;
 }
 
 .wrapper {
@@ -18,7 +119,7 @@ html, body {
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 100vh;
+	height: 100%;
 }
 
 .background__portrait, .background__landscape {
@@ -50,64 +151,64 @@ html, body {
 	margin-bottom: 40px;
 }
 
-.social-block {
+.social {
 	margin-bottom: 10px;
 }
 
-.social-block__item {
+.social__item {
 	float: left;
 	margin: 0 8% 0 -10px;
 }
 
-.social-block svg {
+.social svg {
 	fill: #fff;
 	padding: 10px;
 }
 
-.social-block svg:hover {
+.social svg:hover {
 	transform: scale(1.1);
 	transition: 0.2s;
 }
 
-.social-block svg#facebook {
+.social svg#facebook {
 	width: 12px;
 	height: 22px;
 }
 
-.social-block svg#instagram {
+.social svg#instagram {
 	width: 22px;
 	height: 21px;
 }
 
-.social-block svg#vkontakte {
+.social svg#vkontakte {
 	width: 26px;
 	height: 19px;
 }
 
 /* IF THERE WILL BE
 
-.social-block svg#twitter {
+.social svg#twitter {
 	width: 23px;
 	height: 19px;
 }
 
-.social-block svg#google {
+.social svg#google {
 	width: 24px;
 	height: 24px;
 }
 
-.social-block svg#linkedin {
+.social svg#linkedin {
 	width: 22px;
 	height: 22px;
 }
 
-.social-block svg#pinterest {
+.social svg#pinterest {
 	width: 23px;
 	height: 31px;
 }
 */
 .contacts {
-	margin-bottom: 20px;
+	margin-bottom: 13px;
 }
 
 .contacts__email {
@@ -227,8 +328,16 @@ html, body {
 
 .slick-dots li {
 	position: relative;
-	padding: 20px 15px;
+	padding: 20px 7px;
 	cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+	.slick-dots li {
+		position: relative;
+		padding: 20px 15px;
+		cursor: pointer;
+	}
 }
 
 .slick-dots li button {
@@ -248,15 +357,6 @@ html, body {
 
 li.slick-active > button {
 	background: #fff;
-}
-
-.link_centered {
-	position: absolute;
-	top: 100px;
-	right: 0;
-	left: 0;
-	z-index: 1;
-	text-align: center;
 }
 
 .link a {
