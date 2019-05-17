@@ -4,6 +4,8 @@ $(document).ready(function(){
     loop: true,
     dots: true,
     autoplay: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 4000,
+    pauseOnFocus: false,
+    pauseOnHover: false
   });
 });
