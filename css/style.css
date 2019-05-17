@@ -12,6 +12,7 @@ html, body {
 	height: 100%;
 	min-height: 100%;
 	background-color: #294d09;
+	font-family: GothamBook;
 }
 
 .header {
@@ -26,7 +27,6 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	z-index: 2;
-	font-family: GothamBook;
 	font-weight: bold;
 	color: #fff;
 	text-transform: uppercase;
@@ -97,28 +97,49 @@ html, body {
 .nav__link:hover {
 	opacity: 0.8;
 }
+
 .logo {
 	text-align: center;
 }
 
-.logo a {
+.logo p {
+	margin-bottom: 5px;
 	font-size: 22px;
 	color: #fff;
 	text-decoration: none;
 }
 
-.logo a:hover {
-	opacity: 0.8;
-}
-
-.logo p {
-	margin-top: 5px;
+.logo span {
 	font-size: 14px;
 	opacity: 0.6;
 }
 
+.link {
+	position: absolute;
+	right: 0;
+	bottom: 50px;
+	left: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+	.link {
+		display: none;
+	}
+}
+
+.link a {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.link a:hover {
+	opacity: 0.8;
+}
+
 .wrapper {
-	font-family: GothamBook;
 	color: #fff;
 	background: #294d09 url(../images/background.jpg) no-repeat;
 	background-attachment: fixed;
@@ -136,6 +157,10 @@ html, body {
 	width: 40%;
 	margin: 14% 11% 0;
 	line-height: 1.9em;
+}
+
+.description {
+	margin-bottom: 20px;
 }
 
 .description__header {
@@ -364,7 +389,6 @@ li.slick-active > button {
 	background: #fff;
 }
 
-.link a {
-	font-family: GothamBook;
+.backlink a {
 	color: #fff;
 }
