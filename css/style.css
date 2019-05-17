@@ -11,7 +11,7 @@ html, body {
 	position: relative;
 	height: 100%;
 	min-height: 100%;
-	overflow: hidden;
+	background-color: #294d09;
 }
 
 .header {
@@ -101,13 +101,18 @@ html, body {
 	text-align: center;
 }
 
-.logo p {
-	margin-bottom: 5px;
+.logo a {
 	font-size: 22px;
 	color: #fff;
+	text-decoration: none;
 }
 
-.logo span {
+.logo a:hover {
+	opacity: 0.8;
+}
+
+.logo p {
+	margin-top: 5px;
 	font-size: 14px;
 	opacity: 0.6;
 }
